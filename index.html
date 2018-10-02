@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Stock Symbol Prices</title>
-  <style type="text/css">
-    button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Homework</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <div class="container">
+        <h2>Company Stock Info</h2>
+        <p>The below information is being retrieved from the iexTrading API!</p>
+        Stock<br>
+        <!-- <div id="stocks-view"></div> -->
+        <!-- <div><button id="stocks-view" type="button" class="btn btn-outline-light"></button></div>  -->
+        <!-- <br> -->
 
-  <div class="container">
-    <h1>Stock Search</h1>
+        <div class="input-group">
+          <input id="stockInfo" type="text" class="form-control" placeholder="Enter Stock Tag" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button id="btnSubmit" class="btn btn-outline-secondary" type="submit button">Submit</button>
+            <button id="btnClear" class="btn btn-outline-secondary" type="btnClear button">Clear</button>
+            <button id="resetButtons" class="btn btn-outline-secondary" type="button" >Reset</button>
+          </div>
+        </div>
 
-    <div id="buttons-view"></div>
-
-    <form id="stock-form">
-      <label for="stock-input">Add a Stock Symbol</label>
-      <input type="text" id="stock-input"><br>
-
-      <input id="add-stock" type="submit" value="Add a Stock Symbol">
-    </form>
-
-    <div id="stocks-view"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- <input id="stockInfo" type="text" />
+        <input id="btnSubmit" type="submit" value="Submit" />
+        <input id="btnClear" name="btnClear" type="button" value="Clear" />
+        <input id="resetButtons" type="button" value="Reset" /> -->
+        <div id="logoDiv">
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Stock Symbol</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody id='tBody'>
+            </tbody>
+        </table>
+        <div id="newsDiv">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script> src="./assets/bootstrap/" </script>
     <script src="app.js"></script>
-  </div>
 </body>
-
 </html>
