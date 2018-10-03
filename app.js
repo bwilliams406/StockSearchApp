@@ -1,5 +1,5 @@
  const validationList = []
-  const stocks = []
+  const stocks = ["Choose a Stock"]
   const queryAllSymbols = `https://api.iextrading.com/1.0/ref-data/symbols`;
   $.ajax({
     url: queryAllSymbols,
@@ -59,11 +59,16 @@
     $('#tBody').empty();
     $('#logoDiv').empty();
   });
+
   const render = function () {
     $('#stocks-view').empty();
     for (let i = 0; i < stocks.length; i++) {
       let theId = 'getStocks' + i;
+      if ("#stocks-view" == '') {
+      $("#stocks-view").prepend(`<option value="" selected>Choose a Stock</option>`)
+    } else {
       $('#stocks-view').append(`<option value='${stocks[i]}'>${stocks[i]}</option>`);
+    };
     };                                
   };
 
