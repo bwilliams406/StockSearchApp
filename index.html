@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+     
+
     <div class="container">
-        <h2>Company Stock Info</h2>
-        <p>The below information is being retrieved from the iexTrading API!</p>
-        Stock<br>
-        <!-- <div id="stocks-view"></div> -->
-        <!-- <div><button id="stocks-view" type="button" class="btn btn-outline-light"></button></div>  -->
-        <!-- <br> -->
+
+            <nav class="navbar navbar-light bg-light nvbar">
+                    <span class="navbar-brand mb-0 h1">Company Stock Info</span>
+                  </nav>
+
+        <select class="custom-select" id="stocks-view"></select> 
+
+        <br> 
 
         <div class="input-group">
           <input id="stockInfo" type="text" class="form-control" placeholder="Enter Stock Tag" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
@@ -26,10 +31,6 @@
           </div>
         </div>
 
-        <!-- <input id="stockInfo" type="text" />
-        <input id="btnSubmit" type="submit" value="Submit" />
-        <input id="btnClear" name="btnClear" type="button" value="Clear" />
-        <input id="resetButtons" type="button" value="Reset" /> -->
         <div id="logoDiv">
         </div>
         <table class="table">
